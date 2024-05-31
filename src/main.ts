@@ -14,7 +14,7 @@ async function bootstrap() {
   await fastifyAdapter.register(require('@fastify/cors'), {
     origin: [configService.get<string>('ENDPOINT_CORS')],
     methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
-    credentials: true
+    credentials: true,
   });
 
   app.setGlobalPrefix('api');
